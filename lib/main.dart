@@ -1,8 +1,32 @@
-import 'package:flutter/cupertino.dart';
-import 'package:flutter/material.dart';
+import 'dart:io';
 
-void main() {
+import 'package:chat_app/screens/all_screens.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_auth/firebase_auth.dart';
+import 'package:firebase_core/firebase_core.dart';
+import 'package:flutter/cupertino.dart';
+
+const bool USE_EMULATOR = true;
+
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
+  if (USE_EMULATOR) {
+    _connectToFirebaseEmulator();
+  }
   runApp(const MyApp());
+}
+
+Future _connectToFirebaseEmulator() async {
+  final firestorePort = '8080';
+  final authPort = '9099';
+  final localHost = Platform.isAndroid ? '10.0.2.2' : 'localhost';
+  FirebaseFirestore.instance.settings = Settings(
+      host: '$localHost:$firestorePort',
+      sslEnabled: false,
+      persistenceEnabled: false);
+
+  await FirebaseAuth.instance.useEmulator('http://$localHost:$authPort');
 }
 
 class MyApp extends StatelessWidget {
@@ -14,14 +38,23 @@ class MyApp extends StatelessWidget {
     return CupertinoApp(
       debugShowCheckedModeBanner: false,
       home: HomePage(),
-      theme: CupertinoThemeData(
-          brightness: Brightness.light, primaryColor: Color(0xFF08C187)),
+      theme: const CupertinoThemeData(
+        brightness: Brightness.light,
+        primaryColor: Color(0xFF08C187),
+      ),
     );
   }
 }
 
 class HomePage extends StatelessWidget {
-  const HomePage({super.key});
+  HomePage({Key? key}) : super(key: key);
+
+  var screens = [
+    Chats(),
+    Calls(),
+    People(),
+    SettingsScreen(),
+  ];
 
   @override
   Widget build(BuildContext context) {
@@ -39,7 +72,7 @@ class HomePage extends StatelessWidget {
               icon: Icon(CupertinoIcons.phone),
             ),
             BottomNavigationBarItem(
-              label: 'Persons',
+              label: 'People',
               icon: Icon(CupertinoIcons.person_alt_circle),
             ),
             BottomNavigationBarItem(
@@ -49,11 +82,7 @@ class HomePage extends StatelessWidget {
           ],
         ),
         tabBuilder: (BuildContext context, int index) {
-          return Container(
-            child: Center(
-              child: Text('$index'),
-            ),
-          );
+          return screens[index];
         },
       ),
     );
