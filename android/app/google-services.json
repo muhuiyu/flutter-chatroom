@@ -1,0 +1,118 @@
+{
+  "project_info": {
+    "project_number": "538558528527",
+    "project_id": "chatty-flutter-muyu",
+    "storage_bucket": "chatty-flutter-muyu.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:538558528527:android:097d6cd820d42465e1b77a",
+        "android_client_info": {
+          "package_name": "com.example.chat_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "538558528527-0jsdp477j066iicacb9ib6sijatg3fg5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD8a74ZWIjkKF4bACkSTLa0j8uYUnp91No"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "538558528527-0jsdp477j066iicacb9ib6sijatg3fg5.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "538558528527-2jesv7th5s9jumdvsat9nviivf17ie3l.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.muhiuyu.chatty.flutter"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:538558528527:android:632ca0a3707f5f03e1b77a",
+        "android_client_info": {
+          "package_name": "com.example.chatty_flutter"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "538558528527-0jsdp477j066iicacb9ib6sijatg3fg5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD8a74ZWIjkKF4bACkSTLa0j8uYUnp91No"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "538558528527-0jsdp477j066iicacb9ib6sijatg3fg5.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "538558528527-2jesv7th5s9jumdvsat9nviivf17ie3l.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.muhiuyu.chatty.flutter"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:538558528527:android:0adf453b64f00103e1b77a",
+        "android_client_info": {
+          "package_name": "com.muhiuyu.chatty.flutter"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "538558528527-0jsdp477j066iicacb9ib6sijatg3fg5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD8a74ZWIjkKF4bACkSTLa0j8uYUnp91No"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "538558528527-0jsdp477j066iicacb9ib6sijatg3fg5.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "538558528527-2jesv7th5s9jumdvsat9nviivf17ie3l.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.muhiuyu.chatty.flutter"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
